@@ -28,6 +28,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <footer className="fixed bottom-0 w-full py-2 text-center text-sm text-gray-500 dark:text-gray-400 pointer-events-none">
+          นายธนธรณ์ เม่ากลาง 67162110414-4
+        </footer>
       </body>
     </html>
   );
