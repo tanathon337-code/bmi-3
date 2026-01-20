@@ -32,6 +32,21 @@ export default function LoginPage() {
           ← Back to Home
         </Link>
         <h2 className="mb-6 text-center text-2xl font-bold text-gray-900 dark:text-white">Login</h2>
+        
+        {/* Demo Account Info */}
+        <div className="mb-6 rounded-md bg-blue-50 p-4 text-sm text-blue-800 dark:bg-blue-900/30 dark:text-blue-200">
+          <p className="font-semibold">Demo Account:</p>
+          <p>Email: <span className="font-mono">test@01.com</span></p>
+          <p>Password: <span className="font-mono">001002003</span></p>
+          <button 
+            type="button"
+            onClick={() => setData({ email: 'test@01.com', password: '001002003' })}
+            className="mt-2 text-xs font-medium text-blue-600 hover:underline dark:text-blue-400"
+          >
+            Auto-fill
+          </button>
+        </div>
+
         {error && <p className="mb-4 text-red-500">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
