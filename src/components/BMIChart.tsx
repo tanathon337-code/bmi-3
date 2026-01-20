@@ -29,7 +29,7 @@ export default function BMIChart({ records }: { records: BMIRecord[] }) {
   return (
     <div className="mt-8 overflow-hidden rounded-lg bg-white p-6 shadow dark:bg-zinc-900">
       <h3 className="mb-4 text-lg font-medium text-gray-900 dark:text-white">BMI Trend</h3>
-      <div className="h-64 w-full">
+      <div className="h-[300px] w-full min-h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={data}
