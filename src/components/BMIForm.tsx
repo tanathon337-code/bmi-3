@@ -33,8 +33,9 @@ export default function BMIForm({ onRecordAdded }: { onRecordAdded: () => void }
       <h3 className="text-lg font-medium text-gray-900 dark:text-white">Calculate BMI</h3>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Weight (kg)</label>
+          <label htmlFor="weight" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Weight (kg)</label>
           <input
+            id="weight"
             type="number"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
@@ -44,8 +45,9 @@ export default function BMIForm({ onRecordAdded }: { onRecordAdded: () => void }
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Height (cm)</label>
+          <label htmlFor="height" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Height (cm)</label>
           <input
+            id="height"
             type="number"
             value={height}
             onChange={(e) => setHeight(e.target.value)}

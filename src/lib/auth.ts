@@ -18,34 +18,39 @@ export const authOptions: AuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) {
-          return null;
+        try {
+          if (!credentials?.email || !credentials?.password) {
+            return null;
+          }
+
+          const user = await prisma.user.findUnique({
+            where: {
+              email: credentials.email,
+            },
+          });
+
+          if (!user) {
+            return null;
+          }
+
+          const isPasswordValid = await compare(
+            credentials.password,
+            user.password
+          );
+
+          if (!isPasswordValid) {
+            return null;
+          }
+
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+          };
+        } catch (error) {
+          console.error("Authorize error:", error);
+          throw error;
         }
-
-        const user = await prisma.user.findUnique({
-          where: {
-            email: credentials.email,
-          },
-        });
-
-        if (!user) {
-          return null;
-        }
-
-        const isPasswordValid = await compare(
-          credentials.password,
-          user.password
-        );
-
-        if (!isPasswordValid) {
-          return null;
-        }
-
-        return {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-        };
       },
     }),
   ],
@@ -63,4 +68,5 @@ export const authOptions: AuthOptions = {
       return token;
     },
   },
+  secret: process.env.NEXTAUTH_SECRET,
 };

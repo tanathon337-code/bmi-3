@@ -14,27 +14,27 @@
   - [x] Run Migration แรก
 
 ## Phase 2: ระบบจัดการผู้ใช้งาน (User Management)
-> **Status: Partially Completed**
+> **Status: Completed**
 - [x] **2.1 Authentication (FR-01 - FR-04)**
   - [x] สร้างหน้า Register (สมัครสมาชิก)
   - [x] สร้างหน้า Login (เข้าสู่ระบบ)
   - [x] เชื่อมต่อ NextAuth.js (Credentials Provider)
   - [x] ระบบ Hash Password (bcrypt) (NFR-06)
   - [x] สร้าง Logout Function
-- [ ] **2.2 Profile Management (FR-05)**
-  - [ ] เพิ่ม Table `profiles` หรือ Field ใน `users`:
-    - [ ] `gender` (เพศ)
-    - [ ] `age` (อายุ)
-    - [ ] `height_default` (ส่วนสูงเริ่มต้น)
-    - [ ] `unit_weight`, `unit_height` (หน่วยวัด)
-  - [ ] สร้าง API GET/PUT สำหรับ Profile
-  - [ ] สร้างหน้าแก้ไขโปรไฟล์ (Edit Profile)
-- [ ] **2.3 Admin Role (FR-18)**
-  - [ ] เพิ่ม Field `role` ใน User Table (admin/user)
-  - [ ] สร้างระบบตรวจสอบสิทธิ์ Admin (Middleware/Guard)
+- [x] **2.2 Profile Management (FR-05)**
+  - [x] เพิ่ม Table `profiles` หรือ Field ใน `users`:
+    - [x] `gender` (เพศ)
+    - [x] `age` (อายุ)
+    - [x] `height_default` (ส่วนสูงเริ่มต้น)
+    - [x] `unit_weight`, `unit_height` (หน่วยวัด)
+  - [x] สร้าง API GET/PUT สำหรับ Profile
+  - [x] สร้างหน้าแก้ไขโปรไฟล์ (Edit Profile)
+- [x] **2.3 Admin Role (FR-18)**
+  - [x] เพิ่ม Field `role` ใน User Table (admin/user)
+  - [x] สร้างระบบตรวจสอบสิทธิ์ Admin (Middleware/Guard)
 
 ## Phase 3: การจัดการค่า BMI (BMI Core Features)
-> **Status: Partially Completed**
+> **Status: Completed**
 - [x] **3.1 BMI Calculator & Record (FR-06, FR-07)**
   - [x] สร้างฟอร์มบันทึกน้ำหนัก/ส่วนสูง
   - [x] Logic คำนวณ BMI และแปลผล (ผอม, ปกติ, อ้วน)
@@ -42,46 +42,46 @@
 - [x] **3.2 History View (FR-08)**
   - [x] แสดงรายการประวัติ BMI (Table/List)
   - [x] แสดงกราฟแนวโน้ม (Trend Chart) (FR-10)
-- [ ] **3.3 Manage Records (FR-09)**
-  - [ ] เพิ่มปุ่มลบรายการ (Delete)
-  - [ ] เพิ่มปุ่มแก้ไขรายการ (Edit)
+- [x] **3.3 Manage Records (FR-09)**
+  - [x] เพิ่มปุ่มลบรายการ (Delete)
+  - [x] เพิ่มปุ่มแก้ไขรายการ (Edit)
 
 ## Phase 4: ระบบรายงาน (MIS Reports)
-> **Status: In Progress**
+> **Status: Completed**
 - [x] **4.1 User Reports (FR-12, FR-14 - FR-16)**
   - [x] สร้าง API สรุปข้อมูล (Daily, Weekly, Monthly, Yearly)
   - [x] สร้างหน้า Dashboard รายงาน (กราฟ/ตารางสรุป)
   - [x] ระบบเลือกช่วงเวลา (Period Selector)
-- [ ] **4.2 Admin Reports (FR-13)**
-  - [ ] สร้างหน้า Dashboard สำหรับ Admin (ดูภาพรวมระบบ)
-  - [ ] แสดงสถิติ: จำนวนผู้ใช้, BMI เฉลี่ยรวม, การกระจายตัว
-- [ ] **4.3 Filters (FR-17)**
-  - [ ] เพิ่มตัวกรอง (Filter) วันที่แบบกำหนดเอง
-  - [ ] (Admin) กรองตามกลุ่ม BMI
+- [x] **4.2 Admin Reports (FR-13)**
+  - [x] สร้างหน้า Dashboard สำหรับ Admin (ดูภาพรวมระบบ)
+  - [x] แสดงสถิติ: จำนวนผู้ใช้, BMI เฉลี่ยรวม, การกระจายตัว
+- [x] **4.3 Filters (FR-17)**
+  - [x] เพิ่มตัวกรอง (Filter) วันที่แบบกำหนดเอง
+  - [x] (Admin) กรองตามกลุ่ม BMI
 
 ## Phase 5: การจัดการผู้ดูแลระบบ (Admin Features)
-> **Status: Pending**
-- [ ] **5.1 User Management (FR-19)**
-  - [ ] หน้าแสดงรายชื่อผู้ใช้ทั้งหมด (User List)
-  - [ ] ดูรายละเอียดผู้ใช้ (User Detail & Stats)
-  - [ ] ระบบระงับ/แบนผู้ใช้ (Suspend/Ban)
+> **Status: Completed**
+- [x] **5.1 User Management (FR-19)**
+  - [x] หน้าแสดงรายชื่อผู้ใช้ทั้งหมด (User List)
+  - [x] ดูรายละเอียดผู้ใช้ (User Detail & Stats)
+  - [x] ระบบระงับ/แบนผู้ใช้ (Suspend/Ban)
 
 ## Phase 6: Non-Functional Requirements & Deployment
-> **Status: In Progress**
+> **Status: Completed**
 - [x] **6.1 Documentation**
   - [x] จัดทำ SRS (Software Requirements Specification)
-- [ ] **6.2 UI/UX Polish (NFR-09)**
+- [x] **6.2 UI/UX Polish (NFR-09)**
   - [x] เพิ่มปุ่ม Back ในหน้า Login/Register
   - [x] เพิ่ม Footer ชื่อผู้จัดทำ
-  - [ ] ตรวจสอบ Responsive Design บนมือถือ
-  - [ ] ปรับปรุง Loading State / Error Handling
-- [ ] **6.3 Performance & Security (NFR-03 - NFR-06)**
-  - [ ] ทดสอบโหลดหน้า Dashboard < 3 วินาที
-  - [ ] ตรวจสอบ Data Isolation (User เห็นแค่ของตัวเอง)
-  - [ ] Review ความปลอดภัย (Password Hashing, API Protection)
-- [ ] **6.4 Reliability & Maintenance (NFR-07 - NFR-10)**
-  - [ ] แผนสำรองข้อมูล (Database Backup Strategy)
-  - [ ] ประเมินข้อจำกัด SQLite (Scalability Check)
+  - [x] ตรวจสอบ Responsive Design บนมือถือ
+  - [x] ปรับปรุง Loading State / Error Handling
+- [x] **6.3 Performance & Security (NFR-03 - NFR-06)**
+  - [x] ทดสอบโหลดหน้า Dashboard < 3 วินาที
+  - [x] ตรวจสอบ Data Isolation (User เห็นแค่ของตัวเอง)
+  - [x] Review ความปลอดภัย (Password Hashing, API Protection)
+- [x] **6.4 Reliability & Maintenance (NFR-07 - NFR-10)**
+  - [x] แผนสำรองข้อมูล (Database Backup Strategy)
+  - [x] ประเมินข้อจำกัด SQLite (Scalability Check)
 
 ---
-*Last Updated: 2026-01-19*
+*Last Updated: 2026-01-20*
